@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="img/nav/domain-icon.png" type="image/png">
+    <title>DomainBot</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/core.css" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><img src="img/nav/domain-icon.png"></li>
+        <li><p class="logo">DomainBot</p></li>
+      </ul>
+      <ul>
+        <li class="media-menu"><img src="img/nav/menu.png" onclick="if($('.media-menu-window').css('right') == '-200px') {
+            $('.media-menu-window').css('right', '0px');
+            $('body').css('overflow-y', 'hidden');
+          } else {
+            $('.media-menu-window').css('right', '-200px');
+            $('body').css('overflow-y', 'auto');
+          }"></li>
+        <li><a>Bot</a></li>
+        <li><a>Domain zones</a></li>
+        <li><a>Directory</a></li>
+        <li><a>Blog</a></li>
+        <li><img src="img/nav/usa.png" class="country"></li>
+      </ul>
+    </nav>
+    
+    <section class="media-menu-window">
+      <a>Bot</a>
+      <a>Domain zones</a>
+      <a>Directory</a>
+      <a>Blog</a>
+    </section>
+    
+    <header>
+      <div>
+        <h1>DomainBot — Notifications about the need to renew domains in Telegram</h1>
+        <button>Start using</button>
+      </div>
+      <div>
+        <img src="img/header/iphone.png">
+      </div>
+    </header>
+    <main>
+      <section>
+        <div>
+          <img src="img/main/section01/notification.png">
+        </div>
+        <div>
+          <h2>You won't miss notifications</h2>
+          <p>We use Telegram almost every day and never miss notifications about the need to renew a domain.</p>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h2>Buy a domain</h2>
+          <p>We will notify you about the free domain that you booked first!</p>
+        </div>
+        <div>
+          <img src="img/main/section02/notification.png">
+        </div>
+      </section>
+      <section>
+        <div>
+          <h2>Protect your domain and don't lose it</h2>
+          <button>Protect</button>
+        </div>
+        <div>
+          <h2>+1000 domains</h2>
+          <p>This is the number of domains added to the tracking bot</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <a><small>Bot</small></a>
+        <a><small>Domain zones</small></a>
+        <a><small>Directory</small></a>
+        <a><small>Blog</small></a>
+      </section>
+      <section>
+        <p><small>© 2023 DomainBot</small></p>
+      </section>
+    </footer>
+  </body>
+</html>

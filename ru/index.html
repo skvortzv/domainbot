@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="shortcut icon" href="img/nav/domain-icon.png" type="image/png">
+    <title>DomainBot</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/core.css" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><img src="img/nav/domain-icon.png"></li>
+        <li><p class="logo">DomainBot</p></li>
+      </ul>
+      <ul>
+        <li class="media-menu"><img src="img/nav/menu.png" onclick="if($('.media-menu-window').css('right') == '-200px') {
+            $('.media-menu-window').css('right', '0px');
+            $('body').css('overflow-y', 'hidden');
+          } else {
+            $('.media-menu-window').css('right', '-200px');
+            $('body').css('overflow-y', 'auto');
+          }"></li>
+        <li><a>Бот</a></li>
+        <li><a>Доменные зоны</a></li>
+        <li><a>Каталог</a></li>
+        <li><a>Блог</a></li>
+        <li><img src="img/nav/russia.png" class="country"></li>
+      </ul>
+    </nav>
+    
+    <section class="media-menu-window">
+      <a>Бот</a>
+      <a>Доменные зоны</a>
+      <a>Каталог</a>
+      <a>Блог</a>
+    </section>
+    
+    <header>
+      <div>
+        <h1>DomainBot — Уведомления о необходимости продления доменов в Telegram</h1>
+        <button>Начать использовать</button>
+      </div>
+      <div>
+        <img src="img/header/iphone.png">
+      </div>
+    </header>
+    <main>
+      <section>
+        <div>
+          <img src="img/main/section01/notification.png">
+        </div>
+        <div>
+          <h2>Вы не пропустите уведомления</h2>
+          <p>Мы пользуемся Telegram почти каждый день и никогда не пропустим уведомления о необходимости продления домена.</p>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h2>Купить домен</h2>
+          <p>Мы сообщим вам о свободном домене, который вы забронировали первыми!</p>
+        </div>
+        <div>
+          <img src="img/main/section02/notification.png">
+        </div>
+      </section>
+      <section>
+        <div>
+          <h2>Защитите свой домен и не потеряйте его</h2>
+          <button>Защитить</button>
+        </div>
+        <div>
+          <h2>+1000 доменов</h2>
+          <p>Это количество доменов, добавленных в бот отслеживания</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <a><small>Бот</small></a>
+        <a><small>Доменные зоны</small></a>
+        <a><small>Каталог</small></a>
+        <a><small>Блог</small></a>
+      </section>
+      <section>
+        <p><small>© 2023 DomainBot</small></p>
+      </section>
+    </footer>
+  </body>
+</html>

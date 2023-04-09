@@ -1,0 +1,343 @@
+nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  border-bottom: 2px solid $black;
+  position: relative;
+  background: $white;
+  z-index: 1;
+  
+  ul {
+    display: flex;
+    align-items: center;
+    
+    li.media-menu {
+      display: none;
+      
+      img {
+        @include fluid-box(16px, 32px);
+        opacity: .7;
+      }
+      img:hover {
+        opacity: 1;
+      }
+    }
+    
+    li {
+      img {
+        @include fluid-box(25px, 50px);
+      }
+      
+      img.country {
+        @include fluid-box(20px, 40px);
+        border-radius: 50%;
+        border: 2px solid $black;
+      }
+      
+      a {
+        opacity: .7;
+      }
+      a:hover {
+        opacity: 1;
+      }
+    }
+  }
+  ul:first-child {
+    flex-direction: column;
+    cursor: pointer;
+  }
+  ul:last-child {
+    gap: 25px;
+  }
+}
+
+section.media-menu-window {
+  position: fixed;
+  top: 0px;
+  right: -200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-top: 110px;
+  background: $white;
+  border-left: 2px solid $black;
+  transition: right .25s ease-in-out;
+  
+  a {
+    text-align: center;
+    opacity: .7;
+  }
+  a:hover {
+    opacity: 1;
+  }
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  border-bottom: 2px solid $black;
+  
+  div {
+    @include fluid-height(300px, 600px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    
+    button {
+      @include fluid-width(187px, 374px);
+      @include fluid-height(30px, 60px);
+      align-self: flex-start;
+      background: $red;
+      border-width: 2px 6px 6px 2px;
+      border-style: solid;
+      border-color: $black;
+      border-radius: 20px;
+      transition: background .25s ease-in-out;
+    }
+    button:hover {
+      background: $thistle;
+    }
+    button:active {
+      border-width: 2px 4px 4px 2px;
+      transform: translate(2px, 2px);
+    }
+  }
+  div:first-child {
+    background: url(../img/header/pattern.png), $thistle;
+    border-right: 2px solid $black;
+    padding: 50px;
+  }
+  div:last-child {
+    background: url(../img/header/sketch01.png), url(../img/header/sketch02.png), $red;
+    background-repeat: repeat, no-repeat, repeat;
+    background-position: right top, center, center;
+    background-attachment: fixed, scroll, scroll;
+    background-size: auto, contain, auto;
+    
+    img {
+      @include fluid-height(360px, 720px);
+      @include fluid-width(300px, 600px);
+    }
+  }
+}
+
+main {
+  section {
+    @include fluid-height(120px, 240px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    border-bottom: 2px solid $black;
+    
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      
+      h2 {
+        -webkit-text-stroke: 2px $black;
+      }
+      
+      @keyframes shake01 { 
+        0% { transform: translate(0px, 0px) rotate(0deg); }
+        15% { transform: translate(2px, 2px) rotate(2deg); }
+        30% { transform: translate(0px, 0px) rotate(0deg); }
+        45% { transform: translate(-2px, -2px) rotate(-2deg); }
+        50% { transform: translate(0px, 0px) rotate(0deg); }
+        100% { transform: translate(0px, 0px) rotate(0deg); }
+      }
+      
+      @keyframes shake02 { 
+        0% { transform: translate(0px, 0px) rotate(0deg); }
+        15% { transform: translate(-2px, -2px) rotate(-2deg); }
+        30% { transform: translate(0px, 0px) rotate(0deg); }
+        45% { transform: translate(2px, 2px) rotate(2deg); }
+        50% { transform: translate(0px, 0px) rotate(0deg); }
+        100% { transform: translate(0px, 0px) rotate(0deg); }
+      }
+      
+      img {
+        @include fluid-box(80px, 160px);
+      }
+    }
+    div:first-child {
+      border-right: 2px solid $black;
+    }
+  }
+  section:first-child {
+    div:first-child {
+      background: url(../img/main/section01/sketch.png), $red;
+      background-position: right top;
+      background-attachment: fixed;
+      
+      img {
+        animation: shake01 1.5s;
+        animation-iteration-count: infinite;
+      }
+    }
+    div:last-child {
+      background: url(../img/main/section01/pattern.png), $blue;
+      
+      h2 {
+        color: $red;
+      }
+    }
+  }
+  section:nth-child(2) {
+    div:first-child {
+      background: url(../img/main/section02/pattern.png), $thistle;
+      
+      h2 {
+        color: $blue;
+      }
+    }
+    div:last-child {
+      background: url(../img/main/section01/sketch.png), $red;
+      background-position: right top;
+      background-attachment: fixed;
+      
+      img {
+        animation: shake02 1.5s;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+  section:last-child {
+    @include fluid-height(293px, 586px);
+    
+    div {
+      padding: 50px;
+      gap: 25px;
+      
+      h2 {
+        -webkit-text-stroke: 0px $black;
+      }
+      
+      button {
+        @include fluid-width(187px, 374px);
+        @include fluid-height(30px, 60px);
+        border-width: 2px 6px 6px 2px;
+        border-style: solid;
+        border-color: $black;
+        border-radius: 20px;
+        background: url(../img/main/section01/pattern.png), $white;
+        transition: background .25s ease-in-out;
+      }
+      button:hover {
+        background: url(../img/main/section01/pattern.png), $red;
+      }
+      button:active {
+        border-width: 2px 4px 4px 2px;
+        transform: translate(2px, 2px);
+      }
+    }
+    
+    div:first-child {
+      background: $red;
+    }
+    div:last-child {
+      background: $blue;
+    }
+  }
+}
+
+footer {
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 25px;
+    
+    a {
+      opacity: .7;
+    }
+    a:hover {
+      opacity: 1;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: $white;
+}
+::-webkit-scrollbar-thumb {
+  background: $black;
+}
+
+@media all and (max-width: 800px) {
+  nav {
+    ul:last-child {
+      li {
+        display: none;
+      }
+      li:last-child {
+        display: list-item;
+      }
+      
+      .media-menu {
+        display: list-item;
+      }
+    }
+  }
+  
+  header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    
+    div:first-child {
+      border-bottom: 2px solid $black;
+      border-right: none;
+    }
+  }
+  
+  main {
+    section {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      
+      div {
+        padding: 25px;
+        gap: 10px;
+      }
+      div:first-child {
+        border-right: none;
+      }
+    }
+    section:first-child {
+      div:first-child {
+        order: 2;
+      }
+      div:last-child {
+        order: 1;
+        border-bottom: 2px solid $black;
+      }
+    }
+    section:nth-child(2) {
+      div:first-child {
+        border-bottom: 2px solid $black;
+      }
+    }
+    section:last-child {
+      height: auto;
+      
+      div {
+        @include fluid-height(350px, 700px);
+      }
+      div:first-child {
+        border-bottom: 2px solid $black;
+      }
+    }
+  }
+}
